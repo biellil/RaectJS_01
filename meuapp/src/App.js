@@ -1,13 +1,26 @@
-import react from "react";
+import React from "react";
 
 const Equipe=(props) =>{
 return(
   <div>
-     {props.nome}
+     <Sobre nome ={props.nome}
+      cargo={props.cargo}
+      idade={props.idade}/>
+      <hr/>
   </div>
 );
-
 }
+const Sobre = (props)=>{
+  return(
+    <div>
+          <h2>Ola sou o(a) {props.nome}</h2>
+          <h3>cargo: {props.cargo}</h3>
+          <h3>idade: {props.idade}</h3>
+    </div>
+  );
+}
+
+
 
 function App() {
   return(
